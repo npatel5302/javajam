@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, Outlet } from "react-router-dom";
+import Header from "./components/Header/Header";
+import Navigation from "./components/Navigation/Navigation";
+import Home from "./pages/home/Home";
+import Nomatch from "./pages/nomatch/Nomatch";
+import Jobs from "./pages/jobs/Jobs";
+import Menu from "./pages/menu/Menu";
+import Music from "./pages/music/Music";
+import Footer from "./components/Footer/Footer";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Outlet />}>
+          <Route index element={<Home />} />
+          <Route path="menu" element={<Menu />} />
+          <Route path="music" element={<Music />} />
+          <Route path="jobs" element={<Jobs />} />
+          <Route path="*" element={<Nomatch />} />
+        </Route>
+      </Routes>
+      <Footer />
+    </>
   );
 }
 
