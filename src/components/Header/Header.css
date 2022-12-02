@@ -1,0 +1,26 @@
+header {
+  color: #231814;
+  background-color: #d2b48c;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-image: url("../../assets/images/cup.jpg");
+  background-repeat: no-repeat;
+  padding-left: 105px;
+  height: 128px;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header a:link {
+  color: #231814;
+}
+
+header a:visited {
+  color: #231814;
+}
+
+header a:hover {
+  color: #fef6c2;
+}

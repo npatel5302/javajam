@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+h1 {
+  font-size: 2em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  color: #8c3826;
+  font-size: 1.5em;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+h4 {
+  background-color: #d2b48c;
+  font-size: 1.2em;
+  padding-left: 0.5em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  padding-bottom: 0;
+  clear: left;
+}
+
+h3,
+dt {
+  color: #8c3826;
+}
+
+@media only screen and (min-width: 600px) {
+  header {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  nav ul {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+
+  nav li {
+    border-bottom: none;
+  }
+
+  #homehero {
+    height: 50vh;
+    background-image: url("./assets/images/hero.jpg");
+  }
+
+  #heromugs {
+    background-image: url("./assets/images/heromugs.jpg");
+  }
+
+  #heroguitar {
+    background-image: url("./assets/images/heroguitar.jpg");
+  }
+
+  #flow {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #mobile {
+    display: none;
+  }
+
+  #desktop {
+    display: inline;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: row;
+  }
+
+  h4 {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  form {
+    display: grid;
+    width: 40%;
+    grid-gap: 1em;
+    grid-template-columns: 6em 1fr;
+  }
+
+  input[type="submit"] {
+    grid-column: 2;
+    width: 9em;
+  }
+
+  #herojobs {
+    background-image: url("./assets/images/herojobs.jpg");
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (min-width: 1024px) {
+  header {
+    grid-area: header;
+    background-image: url("./assets/images/coffeelogo.jpg");
   }
-  to {
-    transform: rotate(360deg);
+
+  nav {
+    grid-area: nav;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+
+  #wrapper {
+    display: grid;
+    grid-template:
+      "header header"
+      "nav main"
+      "footer footer" / 200px;
+  }
+
+  nav ul {
+    flex-direction: column;
   }
 }
