@@ -24,3 +24,17 @@ header a:visited {
 header a:hover {
   color: #fef6c2;
 }
+
+@media only screen and (min-width: 600px) {
+  header {
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    grid-area: header;
+    background-image: url("../../assets/images/coffeelogo.jpg");
+  }
+}

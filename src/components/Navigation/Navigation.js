@@ -1,21 +1,41 @@
 import "./Navigation.css";
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const Navigation = () => {
   return (
     <nav>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to="/menu">Menu</Link>
+          <NavLink
+            to="/menu"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Menu
+          </NavLink>
         </li>
         <li>
-          <Link to="/music">Music</Link>
+          <NavLink
+            to="/music"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Music
+          </NavLink>
         </li>
         <li>
-          <Link to="/jobs">Jobs</Link>
+          <NavLink
+            to="/jobs"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Jobs
+          </NavLink>
         </li>
       </ul>
     </nav>

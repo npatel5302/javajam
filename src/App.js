@@ -14,15 +14,17 @@ function App() {
     <>
       <Header />
       <Navigation />
-      <Routes>
-        <Route path="/" element={<Outlet />}>
-          <Route index element={<Home />} />
-          <Route path="menu" element={<Menu />} />
-          <Route path="music" element={<Music />} />
-          <Route path="jobs" element={<Jobs />} />
-          <Route path="*" element={<Nomatch />} />
-        </Route>
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Outlet />}>
+            <Route index element={<Home />} />
+            <Route path="menu" element={<Menu />} />
+            <Route path="music" element={<Music />} />
+            <Route path="jobs" element={<Jobs />} />
+            <Route path="*" element={<Nomatch />} />
+          </Route>
+        </Routes>
+      </main>
       <Footer />
     </>
   );
